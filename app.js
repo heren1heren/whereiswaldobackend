@@ -24,7 +24,7 @@ app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
-app.use('/api', indexRouter);
+app.use('/', indexRouter);
 app.use('/images', express.static(__dirname + '/public/images'));
 
 app.use((err, req, res, next) => {
