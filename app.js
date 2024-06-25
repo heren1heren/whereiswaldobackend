@@ -18,7 +18,10 @@ app.use(express.static('public'));
 //Serves all the request which includes /images in the url from Images folder
 app.options('*', cors());
 app.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*'); //! allow my website only when deploy
+  res.header(
+    'Access-Control-Allow-Origin',
+    'https://whereswaldofrontend-a51pepc7f-herens-projects.vercel.app/'
+  ); //! allow my website only when deploy
 
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
